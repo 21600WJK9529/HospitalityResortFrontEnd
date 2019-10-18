@@ -1,5 +1,6 @@
 <?php 
     require_once("../../Maintenance/MaintenanceFunctions.php");
+    //require("../../Auth/Auth.php");
 ?>
     <head>
         <title>Create Page</title>

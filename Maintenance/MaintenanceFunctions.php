@@ -2,13 +2,6 @@
 require_once ("../../vendor/autoload.php");
 //"id","fName", "lName","email","facility","phoneNo"
 class MaintenanceFunctions {
-    // private $user ="";
-    // private $admin ="admin";
-    // private $password="password";
-    // function __construct()
-    // {
-    //     $this->user = $_SESSION['role'];
-    // }
     function create($id,$fName,$lName,$email,$facility,$phoneNo){
         try{
             $params = array(

@@ -22,16 +22,16 @@ include '../../Header.php'
         <div class = "form-group">
         <!--Id-->
         <label>Course ID:</label>
-        <input type="text" class="form-control" name="id" placeholder="id">
+        <input type="text" class="form-control" name="golfID" placeholder="id">
         </div>
 
         <div class = "form-group">
         <!--Course name-->
         <label>Course name:</label>
-        <input type="text" class="form-control"  name="gName" placeholder="gName"> <br>
+        <input type="text" class="form-control"  name="golfName" placeholder="gName"> <br>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>
@@ -39,10 +39,10 @@ include '../../Header.php'
 <?php
 $id = $gName = "";
     
-$id = $_POST['id'];
-$gName = $_POST['gName'];
+$id = $_POST['golfID'];
+$gName = $_POST['golfName'];
 
 $obj = new GolfFunctions();
-$obj->create($id, $gName);
+$obj->update($id, $gName);
 
 ?>

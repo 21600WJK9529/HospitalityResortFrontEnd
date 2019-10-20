@@ -55,7 +55,7 @@ include '../../Header.php'
         <label>Phone no.:</label>
         <input type="text" class="form-control" name="phoneNo" placeholder="phoneNo"> <br>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>

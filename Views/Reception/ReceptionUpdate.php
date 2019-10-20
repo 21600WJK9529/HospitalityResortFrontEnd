@@ -17,7 +17,7 @@ include '../../Header.php'
 <!--"id","fName", "lName","email","facility","phoneNo"-->
 <div class="container">
     <h2>
-    Update maintenance person
+    Update receptionist details
     </h2>
     <form method="post" action="#">
         <div class = "form-group">
@@ -55,7 +55,7 @@ include '../../Header.php'
         <label>Phone no.:</label>
         <input type="text" class="form-control" name="phoneNo" placeholder="phoneNo"> <br>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>

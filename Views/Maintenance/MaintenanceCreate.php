@@ -1,6 +1,5 @@
 <?php 
     require_once("../../Maintenance/MaintenanceFunctions.php");
-    //require("../../Auth/Auth.php");
 ?>
     <head>
         <title>Create Page</title>
@@ -19,7 +18,7 @@ include '../../Header.php'
     <h2>
     Create maintenance person
     </h2>
-    <form method="post" action="#">
+    <form method="post" action="#" id="form">
         <div class = "form-group">
         <!--Id-->
         <label>ID:</label>
@@ -55,7 +54,8 @@ include '../../Header.php'
         <label>Phone no.:</label>
         <input type="text" class="form-control" name="phoneNo" placeholder="phoneNo"> <br>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <!--<button type="submit" class="btn btn-primary">Submit</button>-->
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>

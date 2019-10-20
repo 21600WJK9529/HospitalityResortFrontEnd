@@ -41,4 +41,6 @@ $id = "";
 $id = $_POST['id'];
 $obj->read($id);
 
+
 ?>
+

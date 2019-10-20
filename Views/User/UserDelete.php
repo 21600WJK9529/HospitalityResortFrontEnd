@@ -24,7 +24,7 @@ include '../../Header.php'
         <input type="text" class="form-control" name="id" placeholder="id">
         </div>
 
-        <button type="submit"class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>

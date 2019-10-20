@@ -17,7 +17,7 @@ include '../../Header.php'
 <!--"id","fName", "lName","email","facility","phoneNo"-->
 <div class="container">
     <h2>
-    Read maintenance person
+    Read receptionist
     </h2>
     <form method="post" action="#">
         <div class = "form-group">

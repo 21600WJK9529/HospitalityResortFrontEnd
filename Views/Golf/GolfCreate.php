@@ -18,31 +18,47 @@ include '../../Header.php'
     <h2>
     Create course
     </h2>
-    <form method="post" action="#">
+    <form method="post" action="#" name="myForm" onsubmit="return validateForm()">
         <div class = "form-group">
         <!--Id-->
         <label>Course ID:</label>
-        <input type="text" class="form-control" name="golfID" placeholder="id">
+        <input type="text" class="form-control" name="golfID" placeholder="Id">
         </div>
 
         <div class = "form-group">
         <!--First name-->
         <label>Course name:</label>
-        <input type="text" class="form-control"  name="golfName" placeholder="fName"> <br>
+        <input type="text" class="form-control"  name="golfName" placeholder="Course name"> <br>
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>
 </body>
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["golfID"].value;
+  var y = document.forms["myForm"]["golfName"].value;
+  if (x == "") {
+    alert("ID is required");
+    return false;
+  }
+  if (y == "") {
+    alert("Please provide the course name");
+    return false;
+  }
+}
+</script>
+
 <?php
-$golfID = $golfName = "";
+$id = $gName = "";
     
-$golfID = $_POST['golfID'];
-$golfName = $_POST['golfName'];
+$id = $_POST['golfID'];
+$gName = $_POST['golfName'];
 
 $obj = new GolfFunctions();
-$obj->create($golfID,$golfName);
+$obj->create($id, $gName);
 
 ?>

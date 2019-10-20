@@ -24,7 +24,7 @@ include '../../Header.php'
         <input type="text" class="form-control" name="id" placeholder="id">
         </div>
 
-        <button type="submit"class="btn btn-primary">Submit</button>
+        <input type="submit" class="btn btn-primary" onclick="return confirm('Are you sure?')" >
         
     </form>
 </div>
@@ -32,9 +32,9 @@ include '../../Header.php'
 
 <?php
 
-$obj = new MaintenanceFunctions();
 $id = ""; 
 $id = $_POST['id'];
+$obj = new MaintenanceFunctions();
 $obj->delete($id);
 
 ?>
